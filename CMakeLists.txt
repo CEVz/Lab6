@@ -16,5 +16,5 @@ add_executable(main
   LinkedList.h
   ListInterface.h
   Rational.cpp
-  ListNode.cpp
+  ListNode.h
   PrecondViolatedExcep.cpp)

@@ -208,7 +208,7 @@ std::istream& operator>>(std::istream& s,
 
    s >> rhs.numerator
      >> dummy
-     >> rhs. denominator;
+     >> rhs.denominator;
 
    rhs.lowTerms();
 
@@ -216,9 +216,14 @@ std::istream& operator>>(std::istream& s,
 }
 
 
-std::ostream& operator>>(std::ostream& s, Rational& rhs){
+std::ostream& operator<<(std::ostream& lhs,
+			 const Rational& rhs) {
 
-  return s;
+  lhs << rhs.numerator
+      << "/"
+      << rhs.denominator;
+  
+  return lhs;
 
 }
 
