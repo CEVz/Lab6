@@ -216,12 +216,16 @@ std::istream& operator>>(std::istream& s,
 }
 
 
-std::ostream& operator<<(std::ostream& lhs,
+friend std::ostream& operator<<(std::ostream& lhs,
 			 const Rational& rhs) {
 
+  
+  
   lhs << rhs.numerator
       << "/"
       << rhs.denominator;
+
+  lhs.lowTerms();
   
   return lhs;
 
